@@ -2,15 +2,15 @@
   "name": "ca-sdnaik",
   "version": "0.0.0",
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
-"scripts": {
-  "ng": "ng",
-  "build": "ng build",
-  "start": "node dist/CA-sdnaik/server/server.mjs",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test"
-},
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "start": "node dist/CA-sdnaik/server/server.mjs",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
   "private": true,
   "packageManager": "npm@11.11.0",
   "dependencies": {
