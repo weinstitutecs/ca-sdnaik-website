@@ -1,5 +1,23 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/CA-sdnaik/server/server.mjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/CA-sdnaik/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "dest": "/dist/CA-sdnaik/browser/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/CA-sdnaik/server/server.mjs"
+    }
   ]
 }
